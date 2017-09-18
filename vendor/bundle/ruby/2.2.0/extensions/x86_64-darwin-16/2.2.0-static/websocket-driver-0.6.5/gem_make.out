@@ -1,0 +1,11 @@
+/Users/sera/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20170907-83852-ojkyg8.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20170907-83852-ohygpm

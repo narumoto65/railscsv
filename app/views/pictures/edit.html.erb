@@ -1,0 +1,14 @@
+<h1>Pictures#Edit</h1>
+<p><%= @msg%></p>
+<table>
+<%= form_for(@picture, url:{controller:'pictures', action:'update',id:@picture.id}) do |form|%>
+    <tr><th>Title</th>
+        <td><%= form.text_field :title %></td></tr>
+    <tr><th>FileName</th>
+        <td><%=form.text_field :file%></td></tr>
+    <tr><th></th>
+        <td><%=form.submit "送信"%></td></tr>
+<%end%>
+</table>
+
+ 

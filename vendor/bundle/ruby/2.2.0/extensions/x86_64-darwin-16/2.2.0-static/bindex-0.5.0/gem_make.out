@@ -1,0 +1,11 @@
+/Users/sera/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20170907-85214-n55cyg.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20170907-85214-32afsf/bindex
