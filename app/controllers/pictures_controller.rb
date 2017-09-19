@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
   def index
-      @msg = "Pictures data"
+      @msg = "simple db"
       #@picture = Picture.new
       @data =Picture.all
       #modelクラス名
@@ -35,6 +35,21 @@ class PicturesController < ApplicationController
       obj = Picture.find(params[:id])
       obj.destroy
       redirect_to '/pictures'
+  end
+
+  #def csv_download
+  #    @picture = Picture.all
+  #    send_data render_to_string, filename:'data.csv', type: :csv
+  #end
+  
+  def csv_download
+      @picture = Picture.all
+      f = File.open('./app/assets/db.csv','w')
+      @picture.each do |obj|
+        f.print(obj.file)
+        f.print(',')
+      end
+      f.close
   end
 
   private

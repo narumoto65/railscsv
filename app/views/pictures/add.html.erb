@@ -1,10 +1,10 @@
-<h1>People#index</h1>
+<h1>db#addPage</h1>
 <p><%= @msg%></p>
 <table>
     <%= form_for(@picture, url:{controller: 'pictures',action:'create'}) do |form|%>
         <tr><th>Title</th>
             <td><%= form.text_field :title %></td></tr>
-        <tr><th>File</th>
+        <tr><th>Data</th>
              <td><%= form.text_field :file %></td></tr>
         </tr>
         <tr><th></th>

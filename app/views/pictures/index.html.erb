@@ -1,10 +1,9 @@
-<h1>Pictures#index</h1>
-<p>Find me in app/views/pictures/index.html.erb</p>
+<h1>DB#index</h1>
 <p><%=@msg%></p>
 <pre>
 <table>
     <tr>
-        <th>Title</th><th>FileName</th><th></th>
+        <th>Title</th><th>Data</th><th></th><th></th>
     </tr>
     <% @data.each do |obj| %>
     <tr>
@@ -16,6 +15,7 @@
 <%end%>
 </table>
 <a href = "/pictures/add">データの追加</a>
+<a href = "/pictures/csv_download">CSVファイル出力</a>
 </pre>
 <script>
 function delData(num){

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     post 'pictures/add', to: 'pictures#create'
     patch 'pictures/edit/:id', to: 'pictures#update'
     get 'pictures/delete/:id', to: 'pictures#delete'
+    get 'pictures/csv_download', to: 'pictures#csv_download'
     resources :images
     resources :images do
         member do
